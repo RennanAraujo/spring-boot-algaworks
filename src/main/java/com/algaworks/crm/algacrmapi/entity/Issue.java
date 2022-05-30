@@ -1,4 +1,4 @@
-package com.algaworks.crm.algacrmapi.model;
+package com.algaworks.crm.algacrmapi.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +13,8 @@ public class Issue {
 	private Long id;
 
 	private String issueDescription;
+
+	//Mas onde que está setado relacionamento de Issue com Client
 
 	public Issue() {
 	}

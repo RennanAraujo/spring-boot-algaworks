@@ -1,4 +1,4 @@
-package com.algaworks.crm.algacrmapi.model;
+package com.algaworks.crm.algacrmapi.entity;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -9,7 +9,11 @@ public class Client {
 	@Id //essa propriedade identifica o objeto
 	@GeneratedValue(strategy = GenerationType.IDENTITY) //Auto incrementa
 	private Long id; //referencia uma coluna id no banco
+	@Column(nullable = false)
+	private String name; //referencia uma coluna no banco
 
+	//Lombok pode substituir os códigos abaixo
+	//Getters, Setters, Constructors, hashCode and Equals
 	public Client() { //Construtor vazio
 	}
 
@@ -47,6 +51,4 @@ public class Client {
 		this.name = name;
 	}
 
-	@Column(nullable = false)
-	private String name; //referencia uma coluna no banco
 }
